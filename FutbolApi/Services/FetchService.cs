@@ -1,53 +1,57 @@
 ﻿using System;
 using System.Threading.Tasks;
-using FutbolApi.Data;
 using FutbolApi.Models;
+using FutbolApi.Repositories;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using FutbolApi.Data;
 
 namespace FutbolApi.Services
 {
     public class FetchService
     {
-        private readonly ApplicationDbContext context;
-        private readonly ILogger<FetchService> logger;
+        private readonly IRepository<League> _leagueRepository;
+        private readonly IRepository<PlayerData> _playerRepository;
+        private readonly IRepository<Log> _logRepository;
+        private readonly ILogger<FetchService> _logger;
 
-        public FetchService(ApplicationDbContext dbContext, ILogger<FetchService> logger)
+        public FetchService(IRepository<League> leagueRepository, IRepository<PlayerData> playerRepository, IRepository<Log> logRepository, ILogger<FetchService> logger, ApplicationDbContext context)
         {
-            context = dbContext;
-            this.logger = logger;
+            _leagueRepository = leagueRepository;
+            _playerRepository = playerRepository;
+            _logRepository = logRepository;
+            _logger = logger;
         }
 
         public async Task<bool> ProcessDataAsync(string responseBody, string operationName)
         {
             if (operationName == "GetLeagueDetailsAsync")
             {
-                var leagueDetailResponse = JsonConvert.DeserializeObject<LeagueDetailApiResponse>(responseBody);
+                LeagueDetailApiResponse leagueDetailResponse = JsonConvert.DeserializeObject<LeagueDetailApiResponse>(responseBody);
                 if (leagueDetailResponse?.Data == null)
                 {
-                    logger.LogError("No valid data found in the response for {Operation}", operationName);
+                    _logger.LogError("No valid data found in the response for {Operation}", operationName);
                     return false;
                 }
 
-                var league = leagueDetailResponse.Data;
-                var existingLeague = await context.Leagues.FindAsync(league.Id);
+                League league = leagueDetailResponse.Data;
+
+                League existingLeague = await _leagueRepository.GetByIdAsync(league.Id);
+
                 if (existingLeague != null)
                 {
-                    // Update existing league
-                    context.Entry(existingLeague).CurrentValues.SetValues(league);
+                    existingLeague.Name = league.Name;
                 }
                 else
                 {
-                    // Add new league
-                    context.Leagues.Add(league);
+                    await _leagueRepository.AddAsync(league);
                 }
 
-                await context.SaveChangesAsync();
+                await _leagueRepository.SaveChangesAsync();
 
-                // Log the operation to the database
                 await LogToDatabase("Info", operationName, "Fetched data from API successfully");
 
-                // Display the data in a readable format
                 Console.WriteLine($"Id: {league.Id},\n" +
                                   $"SportId: {CheckNull(league.SportId)},\n" +
                                   $"CountryId: {CheckNull(league.CountryId)},\n" +
@@ -63,33 +67,94 @@ namespace FutbolApi.Services
 
                 return true;
             }
-            else
+            else if (operationName == "GetLeaguesAsync")
             {
-                var apiResponse = JsonConvert.DeserializeObject<ApiResponse>(responseBody);
-                if (apiResponse?.Data == null)
+                ApiResponse<League> apiResponse = JsonConvert.DeserializeObject<ApiResponse<League>>(responseBody);
+                if (apiResponse?.Data == null || apiResponse.Data.Count == 0)
                 {
-                    logger.LogError("No valid data found in the response for {Operation}", operationName);
+                    _logger.LogError("No valid data found in the response for {Operation}", operationName);
                     return false;
                 }
 
-                foreach (var player in apiResponse.Data)
+                HashSet<int> id_League = apiResponse.Data.Select(s => s.Id).ToHashSet();
+
+                List<League> local_league = _leagueRepository.GetDb().Where(d => id_League.Contains(d.Id)).ToList();
+
+                foreach (League league in apiResponse.Data)
                 {
-                    var existingPlayer = await context.Players.FindAsync(player.Id);
-                    if (existingPlayer != null)
+                    League updatedLeagueData = local_league.SingleOrDefault(a => a.Id == league.Id);
+
+                    if (updatedLeagueData is not null)
                     {
-                        context.Entry(existingPlayer).CurrentValues.SetValues(player);
+                        updatedLeagueData.Name = league.Name;
                     }
                     else
                     {
-                        context.Players.Add(player);
+                        await _leagueRepository.AddAsync(league);
                     }
                 }
-
-                await context.SaveChangesAsync();
+                await _leagueRepository.SaveChangesAsync();
 
                 await LogToDatabase("Info", operationName, "Fetched data from API successfully");
 
-                foreach (var player in apiResponse.Data)
+
+                local_league = (await _leagueRepository.GetAllAsync()).ToList();
+
+
+                foreach (League league in local_league)
+                {
+                    Console.WriteLine($"Id: {league.Id},\n" +
+                                      $"SportId: {CheckNull(league.SportId)},\n" +
+                                      $"CountryId: {CheckNull(league.CountryId)},\n" +
+                                      $"Name: {CheckNull(league.Name)},\n" +
+                                      $"Active: {CheckNull(league.Active)},\n" +
+                                      $"ShortCode: {CheckNull(league.ShortCode)},\n" +
+                                      $"ImagePath: {CheckNull(league.ImagePath)},\n" +
+                                      $"Type: {CheckNull(league.Type)},\n" +
+                                      $"SubType: {CheckNull(league.SubType)},\n" +
+                                      $"LastPlayedAt: {CheckNull(league.LastPlayedAt)},\n" +
+                                      $"Category: {CheckNull(league.Category)},\n" +
+                                      $"HasJerseys: {CheckNull(league.HasJerseys)}\n");
+                }
+
+                return true;
+
+            }
+            else
+            {
+                ApiResponse<PlayerData> apiResponse = JsonConvert.DeserializeObject<ApiResponse<PlayerData>>(responseBody);
+                if (apiResponse?.Data == null || apiResponse.Data.Count == 0)
+                {
+                    _logger.LogError("No valid data found in the response for {Operation}", operationName);
+                    return false;
+                }
+
+                HashSet<int> ids = apiResponse.Data.Select(s => s.Id).ToHashSet();
+
+                List<PlayerData> local = _playerRepository.GetDb().Where(d => ids.Contains(d.Id)).ToList();
+
+                foreach (PlayerData player in apiResponse.Data)
+                {
+                    PlayerData updatedDate = local.SingleOrDefault(a => a.Id == player.Id);
+
+                    if (updatedDate is not null)
+                    {
+                        updatedDate.JerseyNumber = player.JerseyNumber;
+                    }
+                    else
+                    {
+                        await _playerRepository.AddAsync(player);
+                    }
+                }
+                await _playerRepository.SaveChangesAsync();
+
+                await LogToDatabase("Info", operationName, "Fetched data from API successfully");
+
+
+                local = (await _playerRepository.GetAllAsync()).ToList();
+
+
+                foreach (PlayerData player in local)
                 {
                     Console.WriteLine($"Id: {player.Id},\n" +
                                       $"TransferId: {CheckNull(player.TransferId)},\n" +
@@ -106,7 +171,7 @@ namespace FutbolApi.Services
                 return true;
             }
         }
-        //Null değerleri boş döndürmeceler
+
         private string CheckNull(object value)
         {
             return value == null ? "boş" : value.ToString();
@@ -120,11 +185,11 @@ namespace FutbolApi.Services
                 Level = level,
                 Logger = logger,
                 Message = message,
-                Exception = exception ?? string.Empty 
+                Exception = exception ?? string.Empty
             };
 
-            context.Logs.Add(log);
-            await context.SaveChangesAsync();
+            await _logRepository.AddAsync(log);
+            await _logRepository.SaveChangesAsync();
         }
     }
 }

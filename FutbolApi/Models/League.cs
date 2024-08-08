@@ -22,11 +22,6 @@ namespace FutbolApi.Models
         public bool? HasJerseys { get; set; }
     }
 
-    public class LeagueApiResponse
-    {
-        public List<League> Data { get; set; }
-    }
-
     public class LeagueDetailApiResponse
     {
         public League Data { get; set; }

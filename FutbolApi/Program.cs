@@ -9,8 +9,9 @@ using NLog;
 using NLog.Extensions.Logging;
 using FutbolApi.Services;
 using FutbolApi.Data;
-using Microsoft.AspNetCore.Mvc.ViewFeatures;
-using Microsoft.AspNetCore.Components.Forms;
+using FutbolApi.Repositories;
+using FutbolApi.Models;
+using Microsoft.AspNetCore.Builder;
 
 namespace FutbolApi
 {
@@ -35,8 +36,9 @@ namespace FutbolApi
                         var context = services.GetRequiredService<ApplicationDbContext>();
                         await context.Database.MigrateAsync();
 
-                        var fetchService = new FetchService(context, services.GetRequiredService<ILogger<FetchService>>());
-                        apiService = new ApiService(token, fetchService, services.GetRequiredService<Microsoft.Extensions.Logging.ILogger<ApiService>>());
+                        var fetchService = services.GetRequiredService<FetchService>();
+                        var fetchDataService = services.GetRequiredService<IFetchDataService>();
+                        apiService = new ApiService(token, fetchDataService, services.GetRequiredService<ILogger<ApiService>>());
 
                         await ShowMenu();
                     }
@@ -56,6 +58,7 @@ namespace FutbolApi
                     }
                 }
 
+                await host.RunAsync();
             }
             catch (Exception ex)
             {
@@ -85,6 +88,12 @@ namespace FutbolApi
                         loggingBuilder.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
                         loggingBuilder.AddNLog();
                     });
+
+                    services.AddScoped<IRepository<League>, Repository<League>>();
+                    services.AddScoped<IRepository<PlayerData>, Repository<PlayerData>>();
+                    services.AddScoped<IRepository<Log>, Repository<Log>>();
+                    services.AddScoped<FetchService>();
+                    services.AddScoped<IFetchDataService, FetchDataService>();
                 });
 
         private static async Task ShowMenu()
@@ -92,20 +101,17 @@ namespace FutbolApi
             while (true)
             {
                 Console.WriteLine("Menü:");
-                Console.WriteLine("1. Takımların getirilmesi");
+                Console.WriteLine("1. Takımın getirilmesi");
                 Console.WriteLine("2. liglerinin getirilmesi");
-                Console.WriteLine("3. Istenen ligin getirilmesi");
+                Console.WriteLine("3. istenen ligin getirilmesi");
                 Console.WriteLine("Çıkmak için q'ya basın");
 
                 string choice = Console.ReadLine();
-                string exit = "Çıkıldı";
 
-                await Console.Out.WriteLineAsync(nameof(exit));//Sensei öğretisi
-
-
-                if (string.Equals( choice , nameof(ConsoleKey.Q),StringComparison.OrdinalIgnoreCase))
+                if (string.Equals(choice, nameof(ConsoleKey.Q), StringComparison.OrdinalIgnoreCase))
                 {
-                    break;
+                    
+                    Environment.Exit(0);
                 }
 
                 switch (choice)

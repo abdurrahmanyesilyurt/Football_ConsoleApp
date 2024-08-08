@@ -19,9 +19,9 @@ namespace FutbolApi.Models
         public int? JerseyNumber { get; set; }
     }
 
-    public class ApiResponse
+    public class ApiResponse<T> 
     {
-        public List<PlayerData> Data { get; set; }
+        public List<T> Data { get; set; }
         public object Subscription { get; set; }
         public object RateLimit { get; set; }
         public string Timezone { get; set; }

@@ -8,6 +8,10 @@ namespace FutbolApi.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
+        public ApplicationDbContext()
+        {
+           
+        }
 
         public DbSet<League> Leagues { get; set; }
         public DbSet<PlayerData> Players { get; set; }
