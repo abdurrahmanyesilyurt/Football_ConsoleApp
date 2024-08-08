@@ -1,0 +1,135 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\net6.0\FutbolApi.AssemblyInfo.cs" />
+    <Compile Include="obj\Debug\net6.0\FutbolApi.GlobalUsings.g.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="bin\Debug\net6.0\FutbolApi.deps.json" />
+    <Content Include="bin\Debug\net6.0\FutbolApi.runtimeconfig.json" />
+    <Content Include="obj\Debug\net6.0\FutbolApi.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\FutbolApi.csproj.nuget.dgspec.json" />
+    <Content Include="obj\project.assets.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\net6.0\FutbolApi.dll" />
+    <None Include="bin\Debug\net6.0\FutbolApi.exe" />
+    <None Include="bin\Debug\net6.0\FutbolApi.pdb" />
+    <None Include="bin\Debug\net6.0\Humanizer.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Data.SqlClient.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Extensions.Configuration.Binder.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Extensions.Configuration.CommandLine.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Extensions.Configuration.EnvironmentVariables.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Extensions.Configuration.FileExtensions.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Extensions.Configuration.Json.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Extensions.Configuration.UserSecrets.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Extensions.Diagnostics.Abstractions.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Extensions.Diagnostics.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Abstractions.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Physical.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Extensions.FileSystemGlobbing.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Extensions.Hosting.Abstractions.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Extensions.Hosting.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Extensions.Logging.Configuration.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Extensions.Logging.Console.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Extensions.Logging.Debug.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Extensions.Logging.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Extensions.Logging.EventLog.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Extensions.Logging.EventSource.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Extensions.Options.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Identity.Client.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll" />
+    <None Include="bin\Debug\net6.0\Newtonsoft.Json.dll" />
+    <None Include="bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll" />
+    <None Include="bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll" />
+    <None Include="bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll" />
+    <None Include="bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll" />
+    <None Include="bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll" />
+    <None Include="bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll" />
+    <None Include="bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll" />
+    <None Include="bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll" />
+    <None Include="bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll" />
+    <None Include="bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll" />
+    <None Include="bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll" />
+    <None Include="bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll" />
+    <None Include="bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll" />
+    <None Include="bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll" />
+    <None Include="bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll" />
+    <None Include="bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll" />
+    <None Include="bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll" />
+    <None Include="bin\Debug\net6.0\System.Diagnostics.EventLog.dll" />
+    <None Include="bin\Debug\net6.0\System.Drawing.Common.dll" />
+    <None Include="bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll" />
+    <None Include="bin\Debug\net6.0\System.Runtime.Caching.dll" />
+    <None Include="bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll" />
+    <None Include="bin\Debug\net6.0\System.Security.Permissions.dll" />
+    <None Include="bin\Debug\net6.0\System.Text.Encodings.Web.dll" />
+    <None Include="bin\Debug\net6.0\System.Text.Json.dll" />
+    <None Include="bin\Debug\net6.0\System.Windows.Extensions.dll" />
+    <None Include="obj\Debug\net6.0\apphost.exe" />
+    <None Include="obj\Debug\net6.0\FutbolApi.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\net6.0\FutbolApi.assets.cache" />
+    <None Include="obj\Debug\net6.0\FutbolApi.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\net6.0\FutbolApi.csproj.BuildWithSkipAnalyzers" />
+    <None Include="obj\Debug\net6.0\FutbolApi.csproj.CopyComplete" />
+    <None Include="obj\Debug\net6.0\FutbolApi.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\net6.0\FutbolApi.dll" />
+    <None Include="obj\Debug\net6.0\FutbolApi.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="obj\Debug\net6.0\FutbolApi.genruntimeconfig.cache" />
+    <None Include="obj\Debug\net6.0\FutbolApi.pdb" />
+    <None Include="obj\Debug\net6.0\refint\FutbolApi.dll" />
+    <None Include="obj\Debug\net6.0\ref\FutbolApi.dll" />
+    <None Include="obj\FutbolApi.csproj.nuget.g.props" />
+    <None Include="obj\FutbolApi.csproj.nuget.g.targets" />
+    <None Include="obj\project.nuget.cache" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+</Project>

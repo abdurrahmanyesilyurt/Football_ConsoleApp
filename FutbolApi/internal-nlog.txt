@@ -1,0 +1,98 @@
+2024-08-07 16:23:43.4838 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target with unknown type-alias: 'Database' - Extension NLog.Database not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String typeName, IFactory`1 factory)
+2024-08-07 16:23:43.4965 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'database' not found for logging rule: *.
+2024-08-07 16:23:43.4965 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-07 16:23:43.5142 Info Validating config: Targets=0, ConfigItems=1, FilePath=D:\fitbol\FutbolApi\FutbolApi\bin\Debug\net6.0\NLog.config
+2024-08-07 16:23:43.5142 Info Configuration initialized.
+2024-08-07 16:23:54.7884 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target with unknown type-alias: 'Database' - Extension NLog.Database not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String typeName, IFactory`1 factory)
+2024-08-07 16:23:54.8036 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'database' not found for logging rule: *.
+2024-08-07 16:23:54.8079 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-07 16:23:54.8079 Info Validating config: Targets=0, ConfigItems=1, FilePath=D:\fitbol\FutbolApi\FutbolApi\bin\Debug\net6.0\NLog.config
+2024-08-07 16:23:54.8079 Info Configuration initialized.
+2024-08-07 16:27:12.7332 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target with unknown type-alias: 'Database' - Extension NLog.Database not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String typeName, IFactory`1 factory)
+2024-08-07 16:27:12.7455 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'database' not found for logging rule: *.
+2024-08-07 16:27:12.7455 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-07 16:27:12.7455 Info Validating config: Targets=0, ConfigItems=1, FilePath=D:\fitbol\FutbolApi\FutbolApi\bin\Debug\net6.0\NLog.config
+2024-08-07 16:27:12.7625 Info Configuration initialized.
+2024-08-07 16:27:19.8296 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target with unknown type-alias: 'Database' - Extension NLog.Database not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String typeName, IFactory`1 factory)
+2024-08-07 16:27:19.8414 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'database' not found for logging rule: *.
+2024-08-07 16:27:19.8414 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-07 16:27:19.8572 Info Validating config: Targets=0, ConfigItems=1, FilePath=D:\fitbol\FutbolApi\FutbolApi\bin\Debug\net6.0\NLog.config
+2024-08-07 16:27:19.8572 Info Configuration initialized.
+2024-08-07 16:38:18.0457 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target with unknown type-alias: 'Database' - Extension NLog.Database not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String typeName, IFactory`1 factory)
+2024-08-07 16:38:18.0584 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'database' not found for logging rule: *.
+2024-08-07 16:38:18.0584 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-07 16:38:18.0749 Info Validating config: Targets=0, ConfigItems=1, FilePath=D:\fitbol\FutbolApi\FutbolApi\bin\Debug\net6.0\NLog.config
+2024-08-07 16:38:18.0749 Info Configuration initialized.
+2024-08-07 16:38:38.0176 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target with unknown type-alias: 'Database' - Extension NLog.Database not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String typeName, IFactory`1 factory)
+2024-08-07 16:38:38.0296 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'database' not found for logging rule: *.
+2024-08-07 16:38:38.0296 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-07 16:38:38.0453 Info Validating config: Targets=0, ConfigItems=1, FilePath=D:\fitbol\FutbolApi\FutbolApi\bin\Debug\net6.0\NLog.config
+2024-08-07 16:38:38.0453 Info Configuration initialized.
+2024-08-07 17:13:11.0471 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target with unknown type-alias: 'Database' - Extension NLog.Database not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String typeName, IFactory`1 factory)
+2024-08-07 17:13:11.0595 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'database' not found for logging rule: *.
+2024-08-07 17:13:11.0595 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-07 17:13:11.0754 Info Validating config: Targets=0, ConfigItems=1, FilePath=D:\fitbol\FutbolApi\FutbolApi\bin\Debug\net6.0\NLog.config
+2024-08-07 17:13:11.0754 Info Configuration initialized.
+2024-08-07 17:13:18.4767 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target with unknown type-alias: 'Database' - Extension NLog.Database not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String typeName, IFactory`1 factory)
+2024-08-07 17:13:18.4886 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'database' not found for logging rule: *.
+2024-08-07 17:13:18.4886 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-07 17:13:18.5045 Info Validating config: Targets=0, ConfigItems=1, FilePath=D:\fitbol\FutbolApi\FutbolApi\bin\Debug\net6.0\NLog.config
+2024-08-07 17:13:18.5045 Info Configuration initialized.
+2024-08-07 17:15:07.8693 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target with unknown type-alias: 'Database' - Extension NLog.Database not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String typeName, IFactory`1 factory)
+2024-08-07 17:15:07.8815 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'database' not found for logging rule: *.
+2024-08-07 17:15:07.8815 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-07 17:15:07.8976 Info Validating config: Targets=0, ConfigItems=1, FilePath=D:\fitbol\FutbolApi\FutbolApi\bin\Debug\net6.0\NLog.config
+2024-08-07 17:15:07.8976 Info Configuration initialized.
+2024-08-07 17:15:17.2591 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target with unknown type-alias: 'Database' - Extension NLog.Database not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String typeName, IFactory`1 factory)
+2024-08-07 17:15:17.2718 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'database' not found for logging rule: *.
+2024-08-07 17:15:17.2718 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-07 17:15:17.2878 Info Validating config: Targets=0, ConfigItems=1, FilePath=D:\fitbol\FutbolApi\FutbolApi\bin\Debug\net6.0\NLog.config
+2024-08-07 17:15:17.2878 Info Configuration initialized.
+2024-08-07 17:15:21.2812 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target with unknown type-alias: 'Database' - Extension NLog.Database not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String typeName, IFactory`1 factory)
+2024-08-07 17:15:21.2931 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'database' not found for logging rule: *.
+2024-08-07 17:15:21.2931 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-07 17:15:21.3088 Info Validating config: Targets=0, ConfigItems=1, FilePath=D:\fitbol\FutbolApi\FutbolApi\bin\Debug\net6.0\NLog.config
+2024-08-07 17:15:21.3088 Info Configuration initialized.
+2024-08-07 17:15:45.0990 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target with unknown type-alias: 'Database' - Extension NLog.Database not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String typeName, IFactory`1 factory)
+2024-08-07 17:15:45.1113 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'database' not found for logging rule: *.
+2024-08-07 17:15:45.1113 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-07 17:15:45.1276 Info Validating config: Targets=0, ConfigItems=1, FilePath=D:\fitbol\FutbolApi\FutbolApi\bin\Debug\net6.0\NLog.config
+2024-08-07 17:15:45.1276 Info Configuration initialized.
+2024-08-07 22:56:31.6460 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target with unknown type-alias: 'Database' - Extension NLog.Database not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String typeName, IFactory`1 factory)
+2024-08-07 22:56:31.6584 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'database' not found for logging rule: *.
+2024-08-07 22:56:31.6584 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-07 22:56:31.6748 Info Validating config: Targets=0, ConfigItems=1, FilePath=D:\fitbol\FutbolApi\FutbolApi\bin\Debug\net6.0\NLog.config
+2024-08-07 22:56:31.6748 Info Configuration initialized.
+2024-08-07 22:56:36.3024 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target with unknown type-alias: 'Database' - Extension NLog.Database not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String typeName, IFactory`1 factory)
+2024-08-07 22:56:36.3143 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'database' not found for logging rule: *.
+2024-08-07 22:56:36.3143 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-08-07 22:56:36.3297 Info Validating config: Targets=0, ConfigItems=1, FilePath=D:\fitbol\FutbolApi\FutbolApi\bin\Debug\net6.0\NLog.config
+2024-08-07 22:56:36.3297 Info Configuration initialized.
