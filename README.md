@@ -36,6 +36,9 @@
   ]
 }
 ```
+## App
+![image](https://github.com/user-attachments/assets/b39abbb0-b742-442c-a4a9-d2a99b64d0eb)
+
 ### Option 1 : 
 Retrieves all team members from the API, saves them to the database, and then fetches and displays the data in the console.
 ### Option 2 :
