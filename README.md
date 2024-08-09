@@ -1,19 +1,39 @@
 ﻿# Football_ConsoleApp
-Entry Menu
-![image](https://github.com/user-attachments/assets/b5bcae10-e447-4649-9d1c-d186e3e77938)
 
-Option 1 :
-![image](https://github.com/user-attachments/assets/61acf49a-f549-4d2b-aeb9-235a0be3821a)
-
-Option 2 :
-![image](https://github.com/user-attachments/assets/2859a201-1510-495e-b0d5-160822deb00e)
-
-Option 3 : 
-![image](https://github.com/user-attachments/assets/0bf53a5c-1009-4d02-9a9d-b6311561bb65)
-
-Option 3 with wrong Id:
-![image](https://github.com/user-attachments/assets/eb894add-0312-44d0-9d8d-98c3769fa9cc)
-
+{
+  "PlayerData": [
+    {
+      "Id": 0,                      // integer
+      "TransferId": null,           // integer or null
+      "PlayerId": null,             // integer or null
+      "TeamId": null,               // integer or null
+      "PositionId": null,           // integer or null
+      "DetailedPositionId": null,   // integer or null
+      "Start": "YYYY-MM-DD",        // string (date format)
+      "End": "YYYY-MM-DD",          // string (date format) or null
+      "Captain": false,             // boolean
+      "JerseyNumber": null          // integer or null
+    }
+  ]
+}
+{
+  "League": [
+    {
+      "Id": 0,                // integer
+      "SportId": 0,           // integer or null
+      "CountryId": 0,         // integer or null
+      "Name": "",             // string
+      "Active": false,        // boolean
+      "ShortCode": "",        // string or null
+      "ImagePath": "",        // string or null
+      "Type": "",             // string or null
+      "SubType": "",          // string or null
+      "LastPlayedAt": "YYYY-MM-DD",  // string (date format) or null
+      "Category": "",         // string or null
+      "HasJerseys": false     // boolean
+    }
+  ]
+}
 
 Unsolved Problem : 
 
