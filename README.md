@@ -13,3 +13,15 @@ Option 3 :
 
 Option 3 with wrong Id:
 ![image](https://github.com/user-attachments/assets/eb894add-0312-44d0-9d8d-98c3769fa9cc)
+
+
+Unsolved Problem : 
+
+When I delete datas from my local Database while Program running Tracking error pops up I tried AsNoTracking and Attach  Metots it also didin't work if u can solve it pls contact wtih me.
+The log when I did that : 
+![image](https://github.com/user-attachments/assets/f21c94e1-8e90-4657-896b-8f1966f6102c)
+
+The app when I did that : 
+
+![image](https://github.com/user-attachments/assets/fae7686f-baad-47f8-8307-096626592f06)
+
