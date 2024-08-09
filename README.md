@@ -130,17 +130,16 @@ ProcessDataAsync_Should_Add_Then_Remove_And_Add_Again_Multiple_Players
 #### Purpose:
 Similar to the previous test, but for multiple players. This ensures that multiple players can be added, removed, and re-added correctly.
 #### Process:
-Adds multiple players to the database.
-Removes the players.
-Attempts to add the same players again.
-Verifies that all players are processed correctly in batch operations.
+- Adds multiple players to the database.
+- Removes the players.
+- Attempts to add the same players again.
+- Verifies that all players are processed correctly in batch operations.
 
 
 
 ### Unsolved Problem : 
 
-When I delete datas from my local Database while Program running Tracking error pops up I tried AsNoTracking and Attach  Metots it also didin't work if u can solve it pls contact wtih me.
-The log when I did that : 
+When I delete data from my local database while the program is running, a tracking error occurs. I have tried using  **AsNoTracking** and **Attach** methods to resolve the issue, but they did not work. If you have a solution, please feel free to contact me. Below is the log that was generated when this issue occurred:
 ![image](https://github.com/user-attachments/assets/f21c94e1-8e90-4657-896b-8f1966f6102c)
 Error : The instance of entity type 'PlayerData' cannot be tracked because another instance with the same key value for {'Id'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
 
