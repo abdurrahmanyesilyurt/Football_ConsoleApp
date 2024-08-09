@@ -11,11 +11,13 @@ namespace FutbolApi.Repositories
         Task<T> GetByIdAsync(int id);
         Task<IEnumerable<T>> GetAllAsync();
         Task AddAsync(T entity);
+        Task AddRangeAsync(IEnumerable<T> entities); // Toplu ekleme metodu
         Task Update(T entity);
-        Task UpdateList(List<T> entitites);
+        Task UpdateRange(List<T> entitites); // Toplu güncelleme metodu
         IQueryable<T> GetDb();
         Task Remove(T entity);
         Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate);
         Task SaveChangesAsync();
     }
+
 }
